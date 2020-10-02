@@ -25,11 +25,16 @@ describe("Filter function", () => {
         ]; // end of const input varDeclare
 
         const output = [ { id: 3, url: "https://www.link3.dev" }];
+        const output2 = [ 
+            { id: 1, url: "https://www.url1.dev" },
+            { id: 2, url: "https://www.url2.dev" } 
+        ]
 
         expect(filterByTerm(input, "link")).toEqual(output); 
 
         expect(filterByTerm(input, "LINK")).toEqual(output); // new test for case insensitivity
 
+        expect(filterByTerm(input, "uRl")).toEqual(output2); 
     }); // end of test block
 
 
