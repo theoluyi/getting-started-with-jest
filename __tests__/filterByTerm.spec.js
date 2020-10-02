@@ -10,6 +10,15 @@ it takes two args: first a string describing the test suite
 and second a callback/after function for wrapping the actual test
 */
 
+// begin filter function definition 
+function filterByTerm(inputArr, searchTerm) {
+    return inputArr.filter( function(arrayElement) {
+        return arrayElement.url.match(searchTerm)
+    })
+}
+
+
+// begin tests
 describe("Filter function", () => {
 
     //test stuff goes in here
