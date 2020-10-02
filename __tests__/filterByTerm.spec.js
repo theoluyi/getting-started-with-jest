@@ -34,7 +34,9 @@ describe("Filter function", () => {
 
         expect(filterByTerm(input, "LINK")).toEqual(output); // new test for case insensitivity
 
-        expect(filterByTerm(input, "uRl")).toEqual(output2); 
+        expect(filterByTerm(input, "uRl")).toEqual(output2);
+
+        expect(filterByTerm(input, "")).toEqual(input)
     }); // end of test block
 
 
